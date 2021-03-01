@@ -1,4 +1,4 @@
-# E-commerce-using-Django
+# E-commerce Site using Django
 
 It's a E-commerce site design usign python framework Django,HTML5,CSS3,Bootstrap and Javascript.
 
