@@ -1,0 +1,35 @@
+.products {
+  color: white;
+}
+.products img {
+  width: 400px;
+  height: 300px;
+}
+
+.name {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 2px;
+  line-height: 2;
+}
+
+.price {
+  font-family: "Nerko One", cursive;
+  font-size: 30px;
+  margin-bottom: 70px;
+  margin-top: 20px;
+}
+
+.price span {
+  font-size: 25px;
+}
+
+#bor {
+  border-bottom: 2px yellow solid;
+  font-size: 40px;
+}

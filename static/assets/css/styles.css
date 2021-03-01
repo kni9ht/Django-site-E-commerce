@@ -1,0 +1,36 @@
+@media (min-width: 300px) {
+  img {
+    width: 352px;
+  }
+}
+
+@media (min-width: 576px) {
+  img {
+    width: 580px;
+  }
+}
+
+.arrowFromLeft {
+  overflow: hidden;
+  padding: 7px 30px;
+  border-radius: 6px;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(347, 100%, 50%);
+  position: relative;
+}
+
+.arrowFromLeft div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowFromLeft:hover span {
+  transform: translateX(15px);
+}
+
+.arrowFromLeft span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}

@@ -1,0 +1,155 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Legion | {%block title%}{%endblock%}</title>
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Black+Han+Sans">
+    <link rel="stylesheet" href="{% static 'assets/fonts/fontawesome-all.min.css'  %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/line-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/material-icons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/simple-line-icons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/fontawesome5-overrides.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Features-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Footer-Dark.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Header-Dark.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Team-Clean.css' %}">
+    <link rel="stylesheet" href="{%  static 'assets/css/Team-Boxed.css' %}">
+    <link rel="stylesheet" href="{%  static 'assets/css/Login-Form-Dark.css' %}">
+    <link rel="stylesheet" href="{%  static 'assets/css/design.css' %}">
+    <link rel="stylesheet" href="<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Poppins:wght@600&display=swap">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"> 
+    <style>
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: yellow;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 30px;
+        }
+
+        #myBtn:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body style="padding: 0;margin: 0;height: 735px;background: #121212;width: 100%;max-width: 100%;">
+    <button onclick="topFunction()" id="myBtn" title="Go to top" <i class="fas fa-arrow-up"></i></button>
+    <div>
+        <div class="header-dark" style="background: #000000;">
+            <nav class="navbar navbar-dark navbar-expand-lg navigation-clean-search">
+                <div class="container"><a class="navbar-brand"
+                        style="font-family: 'Black Han Sans', sans-serif;font-weight: normal;"
+                        href="/home">Legion.</a><button data-toggle="collapse" class="navbar-toggler"
+                        data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+                            class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="/desktop">DESKTOP</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/laptop">LAPTOP</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/accessory">ACCESSORIES</a></li>
+                            <li class="nav-item"><a class="nav-link text-warning border rounded border-warning"
+                                    data-bs-hover-animate="shake" href="#">SPECIAL OFFERS</a></li>
+                        </ul>
+                        <form class="form-inline mr-auto" target="_self">
+                            <div class="form-group" style="margin-left: 25px;"><label for="search-field"><i
+                                        class="fa fa-search"></i></label><input class="form-control search-field"
+                                    type="search" id="search-field" name="search"></div>
+                        </form>
+                        <span class="navbar-text" id="login">{% if request.user.is_anonymous %}<a class="btn btn-light action-button" href="/login">Log In</a>{% endif %}</span>
+                        <span class="navbar-text" id="user" style="text-transform: uppercase;">{% if request.user.is_authenticated %}{{user.username}}{% endif %}</span>
+                        <span id="logout" style="margin-left: 10px">{% if request.user.is_authenticated %}<a href="/logout"><div class="arrowFromLeft"></svg><span><i class="icon-logout"></i></span></div></a>{% endif %}</span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    {%block body%}{%endblock%}
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Prebuilt Gamming PC</a></li>
+                            <li><a href="#">Coustom PC</a></li>
+                            <li><a href="#">System Builts</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Company Name</h3>
+                        <p style="color: #e5e9ed;">yogeshjadhav18hc@student.mes.ac.in&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +91
+                            730-3070-166&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sale&amp;Support<br></p>
+                    </div>
+                    <div class="col item social">
+                        <a data-bs-hover-animate="flash" href="https://www.facebook.com/profile.php?id=100009119773508"><i class="icon ion-social-facebook"></i></a>
+                        <a data-bs-hover-animate="flash" href="https://github.com/kni9ht"><i class="fab fa-github"></i></a>
+                        <a data-bs-hover-animate="flash" href="https://discord.gg/JtdfpBf"><i class="fab fa-discord"></i></a>
+                        <a data-bs-hover-animate="flash" href="https://www.instagram.com/_kni9ht/"><i class="icon ion-social-instagram"></i></a>
+                    </div>
+                </div>
+                <p class="copyright">Company Legion © 2017</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script src="{%  static 'assets/js/jquery.min.js' %} "></script>
+    <script src="{%  static 'assets/bootstrap/js/bootstrap.min.js' %} "></script>
+    <script src="{%  static 'assets/js/bs-init.js' %} "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
+</body>
+
+</html>
