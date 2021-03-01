@@ -11,7 +11,6 @@ pip install django
 
 Admin Credentials are : [kni9ht:admin]
 
-Don't forget to change the Static path and the Template path
 ```
 
 ## Usage
