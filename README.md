@@ -9,10 +9,8 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install TODO.
 ```bash
 pip install django
 
-Admin Credentials are : [kni9ht:admin]
-
 ```
-## Installation
+## Login Credentials
 ```bash
 kni9ht:admin
 
