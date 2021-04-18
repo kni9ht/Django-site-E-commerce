@@ -12,6 +12,11 @@ pip install django
 Admin Credentials are : [kni9ht:admin]
 
 ```
+## Installation
+```bash
+kni9ht:admin
+
+```
 
 ## Usage
 
