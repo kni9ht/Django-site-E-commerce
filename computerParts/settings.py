@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$3_1pxy5x03el93h2p@p5zza9w^#_$0wd$l^xnkx#pu12zihak'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['legion-website.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -123,8 +123,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MESSAGE_TAGS = {
     messages.WARNING: 'danger'
 }
