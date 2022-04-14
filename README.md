@@ -2,6 +2,9 @@
 
 It's a E-commerce site design using python framework Django,HTML5,CSS3,Bootstrap and Javascript.
 
+## Deployed Link
+* https://legion-website.herokuapp.com/home/
+
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install TODO.
