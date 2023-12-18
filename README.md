@@ -13,6 +13,10 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install TODO.
 pip install django
 
 ```
+```bash
+python manage.py collectstatic
+
+```
 ## Login Credentials
 ```bash
 kni9ht:admin
